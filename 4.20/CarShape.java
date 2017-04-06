@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.Frame;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
@@ -30,11 +31,16 @@ public class CarShape implements MoveableShape {
 		Line2D.Double roofTop = new Line2D.Double(r2, r3);
 		Line2D.Double rearWindshield = new Line2D.Double(r3, r4);
 
-		g2.draw(body);
-		g2.draw(frontTire);
-		g2.draw(rearTire);
+		g2.setColor(Color.GREEN);
+		g2.fill(body);
+		g2.setColor(Color.GRAY);
+		g2.fill(frontTire);
+		g2.fill(rearTire);
+		g2.setColor(Color.BLACK);
 		g2.draw(frontWindshield);
+		g2.setColor(Color.BLACK);
 		g2.draw(roofTop);
+		g2.setColor(Color.BLACK);
 		g2.draw(rearWindshield);
 	}
 
